@@ -11,7 +11,7 @@ const featureCards = [
 
 export default function HeroSection() {
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden">
+    <section className="relative flex items-center overflow-hidden">
       <Image
         src="/images/bc/bc-32.jpg"
         alt="Projet routier Billiekia Concept"
@@ -28,11 +28,11 @@ export default function HeroSection() {
         <div className="absolute bottom-0 -left-32 w-80 h-80 rounded-full bg-[#E85420]/10 blur-3xl" />
       </div>
 
-      <div className="relative w-full py-32 pt-40">
+      <div className="relative w-full pt-24 pb-16 lg:pt-28 lg:pb-16">
         <div className="wrapper grid lg:grid-cols-2 gap-16 items-center">
           {/* Text */}
           <div className="animate-fade-in-up">
-            <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-5 py-2 mb-8">
+            <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-5 py-2 mb-5">
               <span className="w-2 h-2 rounded-full bg-[#E85420] animate-pulse" />
               <span
                 className="text-white/90 text-sm uppercase tracking-widest font-medium"
@@ -43,14 +43,14 @@ export default function HeroSection() {
             </div>
 
             <p
-              className="text-[#E85420] text-sm uppercase tracking-widest font-semibold mb-4"
+              className="text-[#E85420] text-sm uppercase tracking-widest font-semibold mb-3"
               style={{ fontFamily: "var(--font-bw, Barlow, sans-serif)" }}
             >
               Bureau d&apos;études basé à N&apos;Djamena, Tchad
             </p>
 
             <h1
-              className="text-5xl md:text-6xl xl:text-7xl font-bold text-white leading-[1.1] mb-6 uppercase"
+              className="text-4xl md:text-5xl xl:text-6xl font-bold text-white leading-[1.1] mb-5 uppercase"
               style={{ fontFamily: "var(--font-bc, 'Barlow Condensed', sans-serif)" }}
             >
               Bureau d'Études
@@ -58,7 +58,7 @@ export default function HeroSection() {
               <span className="text-[#E85420]">&amp; Ingénierie</span>
             </h1>
 
-            <p className="text-gray-200 text-lg leading-relaxed mb-10 max-w-xl">
+            <p className="text-gray-200 text-base leading-relaxed mb-8 max-w-xl">
               Basé au Tchad, Billiekia Concept accompagne vos projets d&apos;infrastructure,
               d&apos;agriculture, d&apos;environnement, d&apos;aménagement territorial,
               d&apos;hydraulique et d&apos;assainissement, de la conception à la réalisation —
@@ -105,14 +105,6 @@ export default function HeroSection() {
             ))}
           </div>
         </div>
-      </div>
-
-      {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 text-white/60 flex flex-col items-center gap-2 animate-bounce">
-        <span className="text-xs uppercase tracking-widest" style={{ fontFamily: "var(--font-bw)" }}>
-          Défiler
-        </span>
-        <Icon name="chevron-down" size={20} className="[&_path]:stroke-white/60" />
       </div>
     </section>
   );
