@@ -22,7 +22,7 @@ export default function ServicesOverview() {
             Nos Domaines d'Expertise
           </h2>
           <p className="text-gray-600 mt-8 max-w-2xl mx-auto leading-relaxed text-base">
-            Notre bureau d'études couvre l'ensemble du cycle de préparation, conception et suivi des projets dans le domaine des infrastructures.
+            Basé au Tchad, notre bureau d'études couvre l'ensemble du cycle de préparation, conception et suivi des projets dans les domaines des infrastructures, de l'agriculture, de l'environnement, de l'aménagement territorial, de l'hydraulique et de l'assainissement.
           </p>
         </div>
 

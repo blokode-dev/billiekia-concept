@@ -7,9 +7,9 @@ import ProcessSection from "@/components/home/ProcessSection";
 import ProjectsTeaser from "@/components/home/ProjectsTeaser";
 
 export const metadata: Metadata = {
-  title: "Billiekia Concept | Bureau d'Études & Ingénierie des Infrastructures",
+  title: "Billiekia Concept | Bureau d'Études & Ingénierie au Tchad",
   description:
-    "Billiekia Concept est un cabinet de bureau d'études spécialisé en ingénierie des infrastructures. Études techniques, conception APS/APD, supervision travaux, EIES. Quality · Performance · Excellency.",
+    "Billiekia Concept est un cabinet de bureau d'études basé à N'Djamena, au Tchad, spécialisé en ingénierie des infrastructures, agriculture, environnement, aménagement territorial, hydraulique et assainissement. Études techniques, conception APS/APD, supervision travaux, EIES. Quality · Performance · Excellency.",
 };
 
 export default function HomePage() {

@@ -5,7 +5,7 @@ import Image from "next/image";
 export const metadata: Metadata = {
   title: "Projets & Réalisations",
   description:
-    "Découvrez les projets et réalisations de Billiekia Concept : études d'infrastructure, supervision de travaux, EIES et bien plus.",
+    "Découvrez les projets et réalisations de Billiekia Concept au Tchad et en Afrique : études d'infrastructure, agriculture, environnement, aménagement territorial, hydraulique, assainissement, supervision de travaux, EIES et bien plus.",
 };
 
 const projects = [
@@ -136,8 +136,9 @@ export default function ProjetsPage() {
             Nos Projets & Réalisations
           </h1>
           <p className="text-gray-200 text-lg leading-relaxed max-w-2xl mx-auto">
-            Découvrez notre portfolio de projets réalisés pour des clients publics et privés
-            à travers différents secteurs de l&apos;infrastructure.
+            Découvrez notre portfolio de projets réalisés au Tchad et dans plusieurs pays
+            d&apos;Afrique pour des clients publics et privés, à travers différents secteurs de
+            l&apos;infrastructure.
           </p>
         </div>
       </section>

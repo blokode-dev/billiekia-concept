@@ -5,7 +5,7 @@ import Icon from "@/components/Icon";
 
 export const metadata: Metadata = {
   title: "Services",
-  description: "Découvrez les services de Billiekia Concept : études de faisabilité, conception technique APS/APD, supervision des travaux, études d'impact EIES, assistance maîtrise d'ouvrage.",
+  description: "Découvrez les services de Billiekia Concept, bureau d'études basé au Tchad : études de faisabilité, conception technique APS/APD, supervision des travaux, études d'impact EIES, assistance maîtrise d'ouvrage, agriculture, environnement, aménagement territorial, hydraulique et assainissement.",
 };
 
 const services = [
@@ -29,7 +29,10 @@ export default function ServicesPage() {
           <p className="text-[#E85420] font-semibold text-sm uppercase tracking-widest mb-5" style={{ fontFamily: "var(--font-bw)" }}>Notre offre</p>
           <h1 className="text-5xl md:text-6xl font-bold uppercase mb-6" style={{ fontFamily: "var(--font-bc, 'Barlow Condensed', sans-serif)" }}>Nos Services d&apos;Ingénierie</h1>
           <p className="text-gray-200 text-lg leading-relaxed max-w-2xl mx-auto">
-            Notre bureau d&apos;études couvre l&apos;ensemble du cycle de vie de vos projets d&apos;infrastructure, de la conception à la réception des travaux.
+            Basé au Tchad, notre bureau d&apos;études couvre l&apos;ensemble du cycle de vie de vos
+            projets, de la conception à la réception des travaux — au-delà de
+            l&apos;infrastructure, dans les domaines de l&apos;agriculture, l&apos;environnement,
+            l&apos;aménagement territorial, l&apos;hydraulique et l&apos;assainissement.
           </p>
         </div>
       </section>

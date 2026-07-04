@@ -6,7 +6,7 @@ import Icon from "@/components/Icon";
 export const metadata: Metadata = {
   title: "À Propos",
   description:
-    "Découvrez Billiekia Concept, un cabinet de bureau d'études spécialisé en ingénierie des infrastructures. Notre histoire, nos valeurs et notre équipe.",
+    "Découvrez Billiekia Concept, cabinet de bureau d'études basé à N'Djamena, au Tchad, spécialisé en ingénierie des infrastructures, agriculture, environnement, aménagement territorial, hydraulique et assainissement. Notre histoire, nos valeurs et notre équipe.",
 };
 
 const values = [
@@ -49,8 +49,10 @@ export default function AProposPage() {
             À Propos de Billiekia Concept
           </h1>
           <p className="text-gray-200 text-lg leading-relaxed max-w-2xl mx-auto">
-            Un cabinet d&apos;ingénierie engagé, au service de vos projets d&apos;infrastructure,
-            avec une expertise reconnue et une passion pour l&apos;excellence.
+            Basé à N&apos;Djamena, au Tchad, un cabinet d&apos;ingénierie engagé, au service de vos
+            projets d&apos;infrastructure, d&apos;agriculture, d&apos;environnement,
+            d&apos;aménagement territorial, d&apos;hydraulique et d&apos;assainissement, avec une
+            expertise reconnue et une passion pour l&apos;excellence.
           </p>
         </div>
       </section>
@@ -67,21 +69,24 @@ export default function AProposPage() {
             </h2>
             <div className="space-y-5 text-gray-600 leading-relaxed">
               <p>
-                Billiekia Concept est un cabinet de bureau d&apos;études spécialisé dans
-                l&apos;ingénierie des infrastructures. Fondé sur des valeurs d&apos;excellence et
-                de rigueur technique, notre cabinet intervient sur l&apos;ensemble du cycle
-                de vie des projets d&apos;infrastructure.
+                Billiekia Concept est un cabinet de bureau d&apos;études basé à N&apos;Djamena, au
+                Tchad, spécialisé dans l&apos;ingénierie des infrastructures. Fondé sur des
+                valeurs d&apos;excellence et de rigueur technique, notre cabinet intervient sur
+                l&apos;ensemble du cycle de vie des projets, de la conception à la réalisation.
               </p>
               <p>
-                Nous couvrons les domaines des études préliminaires, de la conception
-                technique (APS/APD), de l&apos;assistance à la maîtrise d&apos;ouvrage, du
-                contrôle et suivi des travaux, ainsi que des études d&apos;impact
-                environnemental et social (EIES).
+                Notre expertise ne s&apos;arrête pas à l&apos;ingénierie et aux infrastructures :
+                nous intervenons également en agriculture, environnement, aménagement territorial,
+                hydraulique et assainissement. Nous couvrons les domaines des études
+                préliminaires, de la conception technique (APS/APD), de l&apos;assistance à la
+                maîtrise d&apos;ouvrage, du contrôle et suivi des travaux, ainsi que des études
+                d&apos;impact environnemental et social (EIES).
               </p>
               <p>
                 Notre approche intégrée et notre connaissance approfondie du contexte
                 local nous permettent de fournir des solutions adaptées, efficaces et
-                durables pour nos clients publics et privés.
+                durables pour nos clients publics et privés, au Tchad et dans plusieurs pays
+                d&apos;Afrique : Cameroun, Tunisie, Sénégal, Mali, Niger et Togo.
               </p>
             </div>
           </div>

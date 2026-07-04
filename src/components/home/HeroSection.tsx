@@ -42,6 +42,13 @@ export default function HeroSection() {
               </span>
             </div>
 
+            <p
+              className="text-[#E85420] text-sm uppercase tracking-widest font-semibold mb-4"
+              style={{ fontFamily: "var(--font-bw, Barlow, sans-serif)" }}
+            >
+              Bureau d&apos;études basé à N&apos;Djamena, Tchad
+            </p>
+
             <h1
               className="text-5xl md:text-6xl xl:text-7xl font-bold text-white leading-[1.1] mb-6 uppercase"
               style={{ fontFamily: "var(--font-bc, 'Barlow Condensed', sans-serif)" }}
@@ -49,13 +56,13 @@ export default function HeroSection() {
               Bureau d'Études
               <br />
               <span className="text-[#E85420]">&amp; Ingénierie</span>
-              <br />
-              des Infrastructures
             </h1>
 
             <p className="text-gray-200 text-lg leading-relaxed mb-10 max-w-xl">
-              Billiekia Concept accompagne vos projets d'infrastructure de la conception à la
-              réalisation — avec rigueur, expertise et une exigence absolue de qualité.
+              Basé au Tchad, Billiekia Concept accompagne vos projets d&apos;infrastructure,
+              d&apos;agriculture, d&apos;environnement, d&apos;aménagement territorial,
+              d&apos;hydraulique et d&apos;assainissement, de la conception à la réalisation —
+              avec rigueur, expertise et une exigence absolue de qualité.
             </p>
 
             <div className="flex flex-wrap gap-4">

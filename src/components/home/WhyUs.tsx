@@ -51,7 +51,12 @@ export default function WhyUs() {
               L'Excellence au cœur de chaque projet
             </h2>
             <p className="text-gray-600 leading-relaxed mb-8 text-base">
-              Chez Billiekia Concept, nous ne nous contentons pas de réaliser des études — nous bâtissons des partenariats durables avec nos clients, en plaçant la qualité et la performance au centre de toutes nos interventions.
+              Basé à N&apos;Djamena, au Tchad, et présent au Cameroun, en Tunisie, au Sénégal, au
+              Mali, au Niger et au Togo, Billiekia Concept ne se contente pas de réaliser des
+              études — nous bâtissons des partenariats durables avec nos clients, en plaçant la
+              qualité et la performance au centre de toutes nos interventions, de l&apos;infrastructure
+              à l&apos;agriculture, l&apos;environnement, l&apos;aménagement territorial,
+              l&apos;hydraulique et l&apos;assainissement.
             </p>
             <ul className="space-y-5 mb-10">
               {advantages.map((a, i) => (

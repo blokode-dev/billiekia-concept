@@ -34,19 +34,29 @@ export const metadata: Metadata = {
     template: "%s | Billiekia Concept",
   },
   description:
-    "Cabinet de bureau d'études spécialisé en ingénierie des infrastructures au Tchad. Qualité, Performance, Excellence — nous accompagnons vos projets de la conception à la réalisation.",
+    "Billiekia Concept, bureau d'études basé à N'Djamena au Tchad, spécialisé en ingénierie des infrastructures, agriculture, environnement, aménagement territorial, hydraulique et assainissement. Qualité, Performance, Excellence — nous accompagnons vos projets de la conception à la réalisation au Tchad et en Afrique (Cameroun, Tunisie, Sénégal, Mali, Niger, Togo).",
   keywords: [
     "bureau d'études Tchad",
-    "ingénierie infrastructure",
-    "études techniques",
+    "bureau d'études N'Djamena",
+    "ingénierie infrastructure Tchad",
+    "études techniques Tchad",
     "Billiekia Concept",
-    "EIES impact environnemental",
-    "maîtrise d'ouvrage",
-    "supervision travaux",
+    "EIES impact environnemental Tchad",
+    "maîtrise d'ouvrage Tchad",
+    "supervision travaux Tchad",
     "N'Djamena",
     "Afrique Centrale",
     "APS APD",
     "bureau études ingénierie Tchad",
+    "bureau d'études agriculture Tchad",
+    "aménagement territorial Tchad",
+    "hydraulique et assainissement Tchad",
+    "bureau d'études Cameroun",
+    "bureau d'études Sénégal",
+    "bureau d'études Mali",
+    "bureau d'études Niger",
+    "bureau d'études Togo",
+    "bureau d'études Tunisie",
   ],
   authors: [{ name: "Billiekia Concept" }],
   creator: "Billiekia Concept",
@@ -60,7 +70,7 @@ export const metadata: Metadata = {
     siteName: "Billiekia Concept",
     title: "Billiekia Concept | Bureau d'Études & Ingénierie",
     description:
-      "Cabinet de bureau d'études spécialisé en ingénierie des infrastructures. Quality · Performance · Excellency",
+      "Cabinet de bureau d'études basé au Tchad, spécialisé en ingénierie des infrastructures, agriculture, environnement, aménagement territorial, hydraulique et assainissement. Quality · Performance · Excellency",
     images: [
       {
         url: "/images/bc/bc-25.jpg",
@@ -74,7 +84,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Billiekia Concept | Bureau d'Études & Ingénierie",
     description:
-      "Cabinet de bureau d'études spécialisé en ingénierie des infrastructures au Tchad.",
+      "Cabinet de bureau d'études basé à N'Djamena au Tchad, spécialisé en ingénierie des infrastructures, agriculture, environnement, aménagement territorial, hydraulique et assainissement.",
     images: ["/images/bc/bc-25.jpg"],
   },
   robots: {
@@ -94,7 +104,7 @@ const jsonLd = {
       url: "https://billiekia-concept.com",
       logo: "https://billiekia-concept.com/logo.png",
       description:
-        "Cabinet de bureau d'études spécialisé en ingénierie des infrastructures au Tchad.",
+        "Cabinet de bureau d'études basé à N'Djamena au Tchad, spécialisé en ingénierie des infrastructures, agriculture, environnement, aménagement territorial, hydraulique et assainissement, de la conception à la réalisation.",
       email: "billiekia.concept@gmail.com",
       address: {
         "@type": "PostalAddress",
@@ -103,6 +113,17 @@ const jsonLd = {
         addressLocality: "N'Djamena",
         addressCountry: "TD",
       },
+      taxID: "9009559W",
+      identifier: "RCCM TD-NDJ-11-2011-B1300002",
+      areaServed: [
+        { "@type": "Country", name: "Tchad" },
+        { "@type": "Country", name: "Cameroun" },
+        { "@type": "Country", name: "Tunisie" },
+        { "@type": "Country", name: "Sénégal" },
+        { "@type": "Country", name: "Mali" },
+        { "@type": "Country", name: "Niger" },
+        { "@type": "Country", name: "Togo" },
+      ],
       sameAs: [],
     },
     {
@@ -110,6 +131,8 @@ const jsonLd = {
       "@id": "https://billiekia-concept.com/#localbusiness",
       name: "Billiekia Concept",
       image: "https://billiekia-concept.com/images/bc/bc-25.jpg",
+      description:
+        "Bureau d'études au Tchad intervenant en ingénierie des infrastructures, agriculture, environnement, aménagement territorial, hydraulique et assainissement.",
       email: "billiekia.concept@gmail.com",
       address: {
         "@type": "PostalAddress",
@@ -118,6 +141,15 @@ const jsonLd = {
         addressLocality: "N'Djamena",
         addressCountry: "TD",
       },
+      areaServed: [
+        { "@type": "Country", name: "Tchad" },
+        { "@type": "Country", name: "Cameroun" },
+        { "@type": "Country", name: "Tunisie" },
+        { "@type": "Country", name: "Sénégal" },
+        { "@type": "Country", name: "Mali" },
+        { "@type": "Country", name: "Niger" },
+        { "@type": "Country", name: "Togo" },
+      ],
       openingHoursSpecification: [
         {
           "@type": "OpeningHoursSpecification",

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import Icon from "./Icon";
+import ScrollToTop from "./ScrollToTop";
 
 const services = [
   "Études de faisabilité",
@@ -17,6 +18,16 @@ const pages = [
   { href: "/services", label: "Services" },
   { href: "/projets", label: "Nos Projets" },
   { href: "/contact", label: "Contact" },
+];
+
+const interventionZones = [
+  { country: "Tchad", note: "Siège social — N'Djamena" },
+  { country: "Cameroun", note: "" },
+  { country: "Tunisie", note: "" },
+  { country: "Sénégal", note: "" },
+  { country: "Mali", note: "" },
+  { country: "Niger", note: "" },
+  { country: "Togo", note: "" },
 ];
 
 export default function Footer() {
@@ -56,8 +67,10 @@ export default function Footer() {
             className="h-14 w-auto object-contain mb-6"
           />
           <p className="text-gray-300 text-sm leading-relaxed mb-6">
-            Cabinet de bureau d'études spécialisé en ingénierie des infrastructures. Nous
-            accompagnons vos projets avec qualité, rigueur et excellence.
+            Cabinet de bureau d&apos;études basé à N&apos;Djamena, au Tchad. Notre expertise ne se
+            limite pas à l&apos;ingénierie des infrastructures : nous intervenons aussi en
+            agriculture, environnement, aménagement territorial, hydraulique et assainissement,
+            de la conception à la réalisation.
           </p>
           <p
             className="text-[#E85420] font-semibold text-sm uppercase tracking-widest"
@@ -147,6 +160,56 @@ export default function Footer() {
         </div>
       </div>
 
+      {/* Zones d'intervention & mentions légales */}
+      <div className="border-t border-white/10">
+        <div className="wrapper py-14 grid grid-cols-1 md:grid-cols-2 gap-12">
+          {/* Zones d'intervention */}
+          <div>
+            <h4
+              className="text-white font-bold text-lg uppercase tracking-wide mb-6 border-b border-[#E85420] pb-3"
+              style={{ fontFamily: "var(--font-bc, 'Barlow Condensed', sans-serif)" }}
+            >
+              Zones d&apos;Intervention
+            </h4>
+            <p className="text-gray-300 text-sm leading-relaxed mb-5">
+              Basé au Tchad, Billiekia Concept intervient également dans plusieurs pays
+              d&apos;Afrique :
+            </p>
+            <ul className="grid grid-cols-2 sm:grid-cols-3 gap-x-4 gap-y-3">
+              {interventionZones.map((z) => (
+                <li key={z.country} className="flex items-start gap-2 text-gray-300 text-sm">
+                  <Icon name="location-pin" size={16} className="[&_path]:stroke-[#E85420] mt-0.5 flex-shrink-0" />
+                  <span>
+                    {z.country}
+                    {z.note && <span className="block text-gray-500 text-xs">{z.note}</span>}
+                  </span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Informations légales */}
+          <div>
+            <h4
+              className="text-white font-bold text-lg uppercase tracking-wide mb-6 border-b border-[#E85420] pb-3"
+              style={{ fontFamily: "var(--font-bc, 'Barlow Condensed', sans-serif)" }}
+            >
+              Informations Légales
+            </h4>
+            <ul className="space-y-3 text-gray-300 text-sm">
+              <li>
+                <span className="text-gray-500 uppercase text-xs tracking-wide block mb-0.5">RCCM</span>
+                TD-NDJ-11-2011-B1300002
+              </li>
+              <li>
+                <span className="text-gray-500 uppercase text-xs tracking-wide block mb-0.5">NIF</span>
+                9009559W
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
       {/* Bottom bar */}
       <div className="border-t border-white/10 py-6">
         <div className="wrapper flex flex-col md:flex-row items-center justify-between gap-3 text-gray-400 text-xs">
@@ -164,6 +227,8 @@ export default function Footer() {
           </p>
         </div>
       </div>
+
+      <ScrollToTop />
     </footer>
   );
 }
