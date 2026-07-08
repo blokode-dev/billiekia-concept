@@ -46,6 +46,7 @@ const nextConfig: NextConfig = {
   images: {
     formats: ["image/avif", "image/webp"],
     minimumCacheTTL: 86400,
+    qualities: [75, 85],
   },
 
   // Compression

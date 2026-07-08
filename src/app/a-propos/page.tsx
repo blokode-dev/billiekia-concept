@@ -92,7 +92,7 @@ export default function AProposPage() {
             </div>
           </div>
           <div className="relative">
-            <div className="rounded-2xl overflow-hidden shadow-2xl aspect-[4/3]">
+            <div className="relative rounded-2xl overflow-hidden shadow-2xl aspect-[4/3]">
               <Image src="/images/bc/bc-22.jpg" alt="Chantier Billiekia Concept" fill className="object-cover" />
               <div className="absolute inset-0 bg-gradient-to-t from-[#112850]/50 to-transparent" />
             </div>

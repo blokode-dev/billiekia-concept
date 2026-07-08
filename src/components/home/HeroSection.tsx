@@ -18,7 +18,7 @@ export default function HeroSection() {
         fill
         className="object-cover object-center"
         priority
-        quality={85}
+
       />
       <div className="absolute inset-0 bg-[#112850]/80" />
       <div className="absolute inset-0 bg-gradient-to-r from-[#112850]/60 via-transparent to-[#E85420]/10" />

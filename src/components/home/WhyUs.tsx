@@ -26,7 +26,7 @@ export default function WhyUs() {
 
           {/* Image side */}
           <div className="relative pb-10">
-            <div className="rounded-2xl overflow-hidden shadow-2xl aspect-[4/3]">
+            <div className="relative rounded-2xl overflow-hidden shadow-2xl aspect-[4/3]">
               <Image src="/images/bc/bc-25.jpg" alt="Chantier Billiekia Concept" fill className="object-cover" />
               <div className="absolute inset-0 bg-gradient-to-t from-[#112850]/60 via-transparent to-transparent" />
             </div>
