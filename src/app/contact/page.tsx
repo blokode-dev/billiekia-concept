@@ -4,9 +4,10 @@ import Icon from "@/components/Icon";
 import ContactForm from "@/components/ContactForm";
 
 export const metadata: Metadata = {
-  title: "Contact",
+  title: "Contactez-Nous — Bureau d'Études à N'Djamena, Tchad",
   description:
     "Contactez Billiekia Concept, bureau d'études basé à N'Djamena au Tchad, pour vos projets d'ingénierie, d'infrastructure, d'agriculture, d'environnement, d'aménagement territorial, d'hydraulique et d'assainissement. Nous sommes disponibles pour étudier vos besoins et vous proposer des solutions adaptées.",
+  alternates: { canonical: "https://billiekia.com/contact" },
 };
 
 const infos = [

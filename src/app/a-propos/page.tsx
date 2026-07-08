@@ -4,9 +4,10 @@ import Link from "next/link";
 import Icon from "@/components/Icon";
 
 export const metadata: Metadata = {
-  title: "À Propos",
+  title: "À Propos — Bureau d'Études & Ingénierie au Tchad",
   description:
     "Découvrez Billiekia Concept, cabinet de bureau d'études basé à N'Djamena, au Tchad, spécialisé en ingénierie des infrastructures, agriculture, environnement, aménagement territorial, hydraulique et assainissement. Notre histoire, nos valeurs et notre équipe.",
+  alternates: { canonical: "https://billiekia.com/a-propos" },
 };
 
 const values = [

@@ -25,7 +25,7 @@ const inter = Inter({
   display: "swap",
 });
 
-const BASE_URL = "https://billiekia-concept.com";
+const BASE_URL = "https://billiekia.com";
 
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
@@ -99,10 +99,10 @@ const jsonLd = {
   "@graph": [
     {
       "@type": "Organization",
-      "@id": "https://billiekia-concept.com/#organization",
+      "@id": "https://billiekia.com/#organization",
       name: "Billiekia Concept",
-      url: "https://billiekia-concept.com",
-      logo: "https://billiekia-concept.com/logo.png",
+      url: "https://billiekia.com",
+      logo: "https://billiekia.com/logo.png",
       description:
         "Cabinet de bureau d'études basé à N'Djamena au Tchad, spécialisé en ingénierie des infrastructures, agriculture, environnement, aménagement territorial, hydraulique et assainissement, de la conception à la réalisation.",
       email: "billiekia.concept@gmail.com",
@@ -128,9 +128,9 @@ const jsonLd = {
     },
     {
       "@type": "LocalBusiness",
-      "@id": "https://billiekia-concept.com/#localbusiness",
+      "@id": "https://billiekia.com/#localbusiness",
       name: "Billiekia Concept",
-      image: "https://billiekia-concept.com/images/bc/bc-25.jpg",
+      image: "https://billiekia.com/images/bc/bc-25.jpg",
       description:
         "Bureau d'études au Tchad intervenant en ingénierie des infrastructures, agriculture, environnement, aménagement territorial, hydraulique et assainissement.",
       email: "billiekia.concept@gmail.com",

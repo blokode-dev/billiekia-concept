@@ -3,9 +3,10 @@ import Link from "next/link";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "Projets & Réalisations",
+  title: "Projets & Réalisations — Infrastructure & Génie Civil au Tchad",
   description:
     "Découvrez les projets et réalisations de Billiekia Concept au Tchad et en Afrique : études d'infrastructure, agriculture, environnement, aménagement territorial, hydraulique, assainissement, supervision de travaux, EIES et bien plus.",
+  alternates: { canonical: "https://billiekia.com/projets" },
 };
 
 const projects = [

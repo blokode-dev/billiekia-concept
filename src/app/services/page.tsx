@@ -4,8 +4,9 @@ import Image from "next/image";
 import Icon from "@/components/Icon";
 
 export const metadata: Metadata = {
-  title: "Services",
+  title: "Services d'Ingénierie au Tchad — APS, APD, EIES, Supervision",
   description: "Découvrez les services de Billiekia Concept, bureau d'études basé au Tchad : études de faisabilité, conception technique APS/APD, supervision des travaux, études d'impact EIES, assistance maîtrise d'ouvrage, agriculture, environnement, aménagement territorial, hydraulique et assainissement.",
+  alternates: { canonical: "https://billiekia.com/services" },
 };
 
 const services = [
