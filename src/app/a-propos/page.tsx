@@ -6,7 +6,7 @@ import Icon from "@/components/Icon";
 export const metadata: Metadata = {
   title: "À Propos — Bureau d'Études & Ingénierie au Tchad",
   description:
-    "Découvrez Billiekia Concept, cabinet de bureau d'études basé à N'Djamena, au Tchad, spécialisé en ingénierie des infrastructures, agriculture, environnement, aménagement territorial, hydraulique et assainissement. Notre histoire, nos valeurs et notre équipe.",
+    "Découvrez Billiekia Concept, bureau d'études basé à N'Djamena, au Tchad, spécialisé en ingénierie des infrastructures, agriculture, environnement, aménagement territorial, hydraulique et assainissement. Notre histoire, nos valeurs et notre équipe.",
   alternates: { canonical: "https://billiekia.com/a-propos" },
 };
 
@@ -29,7 +29,7 @@ const values = [
 ];
 
 const orgBottom = [
-  { label: "Service Exécution des Travaux", color: "#1B3A6B" },
+  { label: "Service d'Équipe Technique et de Centrale", color: "#1B3A6B" },
   { label: "Secrétariat", color: "#2a5298" },
   { label: "Service Comptabilité", color: "#E85420" },
   { label: "Service des Ressources Humaines", color: "#C43A0E" },
@@ -50,7 +50,7 @@ export default function AProposPage() {
             À Propos de Billiekia Concept
           </h1>
           <p className="text-gray-200 text-lg leading-relaxed max-w-2xl mx-auto">
-            Basé à N&apos;Djamena, au Tchad, un cabinet d&apos;ingénierie engagé, au service de vos
+            Basé à N&apos;Djamena, au Tchad, un bureau d&apos;études engagé, au service de vos
             projets d&apos;infrastructure, d&apos;agriculture, d&apos;environnement,
             d&apos;aménagement territorial, d&apos;hydraulique et d&apos;assainissement, avec une
             expertise reconnue et une passion pour l&apos;excellence.
@@ -70,9 +70,9 @@ export default function AProposPage() {
             </h2>
             <div className="space-y-5 text-gray-600 leading-relaxed">
               <p>
-                Billiekia Concept est un cabinet de bureau d&apos;études basé à N&apos;Djamena, au
+                Billiekia Concept est un bureau d&apos;études basé à N&apos;Djamena, au
                 Tchad, spécialisé dans l&apos;ingénierie des infrastructures. Fondé sur des
-                valeurs d&apos;excellence et de rigueur technique, notre cabinet intervient sur
+                valeurs d&apos;excellence et de rigueur technique, nous intervenons sur
                 l&apos;ensemble du cycle de vie des projets, de la conception à la réalisation.
               </p>
               <p>
@@ -81,7 +81,7 @@ export default function AProposPage() {
                 hydraulique et assainissement. Nous couvrons les domaines des études
                 préliminaires, de la conception technique (APS/APD), de l&apos;assistance à la
                 maîtrise d&apos;ouvrage, du contrôle et suivi des travaux, ainsi que des études
-                d&apos;impact environnemental et social (EIES).
+                d&apos;impact environnemental et social (EIES), etc.
               </p>
               <p>
                 Notre approche intégrée et notre connaissance approfondie du contexte
@@ -207,7 +207,7 @@ export default function AProposPage() {
                 Des Experts à Votre Service
               </h2>
               <p className="text-gray-300 leading-relaxed">
-                Notre cabinet réunit des professionnels qualifiés et expérimentés dans les domaines
+                Notre bureau réunit des professionnels qualifiés et expérimentés dans les domaines
                 techniques, administratifs et financiers. Chacun apporte une expertise pointue et
                 un engagement total pour la réussite de vos projets.
               </p>

@@ -67,7 +67,7 @@ export default function Footer() {
             className="h-14 w-auto object-contain mb-6"
           />
           <p className="text-gray-300 text-sm leading-relaxed mb-6">
-            Cabinet de bureau d&apos;études basé à N&apos;Djamena, au Tchad. Notre expertise ne se
+            Bureau d&apos;études basé à N&apos;Djamena, au Tchad. Notre expertise ne se
             limite pas à l&apos;ingénierie des infrastructures : nous intervenons aussi en
             agriculture, environnement, aménagement territorial, hydraulique et assainissement,
             de la conception à la réalisation.
@@ -100,6 +100,7 @@ export default function Footer() {
                 </Link>
               </li>
             ))}
+            <li className="text-gray-500 text-sm pl-3.5">etc.</li>
           </ul>
         </div>
 
