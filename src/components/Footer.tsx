@@ -100,7 +100,10 @@ export default function Footer() {
                 </Link>
               </li>
             ))}
-            <li className="text-gray-500 text-sm pl-3.5">etc.</li>
+            <li className="text-gray-300 text-sm flex items-center gap-2">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#E85420] flex-shrink-0" />
+              etc.
+            </li>
           </ul>
         </div>
 
