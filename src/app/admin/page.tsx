@@ -160,6 +160,7 @@ export default function AdminPage() {
   // Interface admin
   const filtered = filter === "non-lus" ? contacts.filter((c) => !c.lu) : contacts;
   const nonLusCount = contacts.filter((c) => !c.lu).length;
+  const showDetail = selected !== null;
 
   return (
     <div className="min-h-screen bg-[#F8F9FA] flex flex-col">
@@ -184,7 +185,7 @@ export default function AdminPage() {
 
       <div className="flex flex-1 overflow-hidden">
         {/* Liste */}
-        <aside className="w-full sm:w-80 lg:w-96 bg-white border-r border-gray-100 flex flex-col">
+        <aside className={`${showDetail ? "hidden sm:flex" : "flex"} w-full sm:w-80 lg:w-96 bg-white border-r border-gray-100 flex-col`}>
           {/* Filtres */}
           <div className="p-4 border-b border-gray-100 flex gap-2">
             <button
@@ -238,14 +239,21 @@ export default function AdminPage() {
         </aside>
 
         {/* Détail */}
-        <main className="flex-1 overflow-y-auto p-6 hidden sm:block">
+        <main className={`flex-1 overflow-y-auto p-4 sm:p-6 ${showDetail ? "block" : "hidden sm:block"}`}>
           {!selected ? (
             <div className="h-full flex items-center justify-center text-gray-400 text-sm">
               Sélectionnez une demande pour la consulter
             </div>
           ) : (
             <div className="max-w-2xl mx-auto">
-              <div className="bg-white rounded-2xl shadow-sm p-8">
+              {/* Bouton retour mobile */}
+              <button
+                onClick={() => setSelected(null)}
+                className="sm:hidden flex items-center gap-2 text-[#1B3A6B] text-sm font-semibold mb-4"
+              >
+                ← Retour à la liste
+              </button>
+              <div className="bg-white rounded-2xl shadow-sm p-6 sm:p-8">
                 <div className="flex items-start justify-between mb-6">
                   <div>
                     <h2 className="text-2xl font-bold text-[#1B3A6B] uppercase" style={{ fontFamily: "var(--font-bc)" }}>
