@@ -3,6 +3,10 @@
 import { useState, useRef } from "react";
 import Icon from "./Icon";
 
+// Clé publique Web3Forms — remplacer par la vraie clé après vérification de l'email
+// Étapes : aller sur https://web3forms.com → entrer billiekia.concept@gmail.com → le client clique "Confirm" dans l'email → copier la clé ici
+const WEB3FORMS_KEY = "VOTRE_CLE_WEB3FORMS_ICI";
+
 const services = [
   "Études de faisabilité",
   "Conception technique (APS/APD)",
@@ -32,7 +36,7 @@ export default function ContactForm() {
     const form = e.currentTarget;
     const data = new FormData(form);
 
-    // Honeypot : si le champ caché "website" est rempli → bot
+    // Honeypot anti-bot
     if (data.get("website")) return;
 
     // Anti-spam temporel : soumission trop rapide (< 3s) → bot
@@ -41,7 +45,7 @@ export default function ContactForm() {
       return;
     }
 
-    // Validation email basique
+    // Validation email
     const email = (data.get("email") as string) || "";
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
       setError("Adresse email invalide.");
@@ -55,12 +59,49 @@ export default function ContactForm() {
       return;
     }
 
+    const prenom = (data.get("prenom") as string) || "";
+    const nom = (data.get("nom") as string) || "";
+    const telephone = (data.get("telephone") as string) || "";
+    const service = (data.get("service") as string) || "";
+
     setLoading(true);
-    // Ici : remplacer par un appel API réel (ex: /api/contact)
-    await new Promise((r) => setTimeout(r, 1500));
-    setLoading(false);
-    setSent(true);
-    form.reset();
+    try {
+      const res = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({
+          access_key: WEB3FORMS_KEY,
+          // Sujet de l'email reçu
+          subject: `[Billiekia] Demande de ${prenom} ${nom}${service ? ` — ${service}` : ""}`,
+          // Destinataire pour le message de confirmation (optionnel)
+          from_name: `${prenom} ${nom}`,
+          email,
+          // Champs du formulaire
+          "Prénom": prenom,
+          "Nom": nom,
+          "Email": email,
+          "Téléphone": telephone || "—",
+          "Service": service || "—",
+          "Message": message,
+          // Redirection après succès (optionnel — on gère nous-mêmes)
+          redirect: "false",
+          // Désactiver l'email de confirmation automatique au visiteur
+          botcheck: "",
+        }),
+      });
+
+      const json = await res.json();
+      if (json.success) {
+        setSent(true);
+        form.reset();
+      } else {
+        setError("Une erreur est survenue. Veuillez réessayer ou nous contacter par email.");
+      }
+    } catch {
+      setError("Impossible d'envoyer le message. Vérifiez votre connexion.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   if (sent) {
