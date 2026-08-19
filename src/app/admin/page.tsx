@@ -34,6 +34,7 @@ type Contact = {
 export default function AdminPage() {
   const [user, setUser] = useState<User | null>(null);
   const [authLoading, setAuthLoading] = useState(true);
+  const [loginError, setLoginError] = useState("");
   const [contacts, setContacts] = useState<Contact[]>([]);
   const [selected, setSelected] = useState<Contact | null>(null);
   const [filter, setFilter] = useState<"tous" | "non-lus">("tous");
@@ -60,10 +61,18 @@ export default function AdminPage() {
   }, [user]);
 
   const login = async () => {
+    setLoginError("");
     try {
       await signInWithPopup(auth, googleProvider);
-    } catch (e) {
-      console.error(e);
+    } catch (e: unknown) {
+      const code = (e as { code?: string })?.code ?? "";
+      if (code === "auth/popup-blocked") {
+        setLoginError("Le popup a été bloqué. Autorisez les popups pour ce site dans votre navigateur.");
+      } else if (code === "auth/popup-closed-by-user") {
+        // Ignoré — l'utilisateur a fermé la fenêtre
+      } else {
+        setLoginError(`Erreur de connexion : ${code || String(e)}`);
+      }
     }
   };
 
@@ -111,9 +120,14 @@ export default function AdminPage() {
           <p className="text-gray-500 text-sm mb-8">
             Billiekia Concept — Accès réservé
           </p>
+          {loginError && (
+            <p className="text-red-500 text-xs mb-4 bg-red-50 border border-red-200 rounded-lg px-3 py-2">
+              {loginError}
+            </p>
+          )}
           <button
             onClick={login}
-            className="w-full flex items-center justify-center gap-3 border border-gray-200 rounded-xl px-6 py-3 text-sm font-semibold text-gray-700 hover:bg-gray-50 transition-colors"
+            className="w-full flex items-center justify-center gap-3 border border-gray-200 rounded-xl px-6 py-3 text-sm font-semibold text-gray-700 hover:bg-gray-50 transition-colors cursor-pointer"
           >
             <svg width="20" height="20" viewBox="0 0 48 48">
               <path fill="#4285F4" d="M44.5 20H24v8.5h11.9C34.2 33.9 29.6 37 24 37c-7.2 0-13-5.8-13-13s5.8-13 13-13c3.1 0 6 1.1 8.1 3l6.4-6.4C34.6 4.1 29.6 2 24 2 11.8 2 2 11.8 2 24s9.8 22 22 22c11 0 21-8 21-22 0-1.3-.2-2.7-.5-4z"/>
