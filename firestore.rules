@@ -1,0 +1,12 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /contacts/{document} {
+      // N'importe qui peut soumettre une demande de contact
+      allow create: if true;
+      // Seul l'admin authentifié peut lire, modifier ou supprimer
+      allow read, update, delete: if request.auth != null
+        && request.auth.token.email == "billiekia.concept@gmail.com";
+    }
+  }
+}

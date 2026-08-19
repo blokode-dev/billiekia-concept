@@ -1,11 +1,9 @@
 "use client";
 
 import { useState, useRef } from "react";
+import { collection, addDoc, serverTimestamp } from "firebase/firestore";
+import { db } from "@/lib/firebase";
 import Icon from "./Icon";
-
-// Clé publique Web3Forms — remplacer par la vraie clé après vérification de l'email
-// Étapes : aller sur https://web3forms.com → entrer billiekia.concept@gmail.com → le client clique "Confirm" dans l'email → copier la clé ici
-const WEB3FORMS_KEY = "VOTRE_CLE_WEB3FORMS_ICI";
 
 const services = [
   "Études de faisabilité",
@@ -39,66 +37,42 @@ export default function ContactForm() {
     // Honeypot anti-bot
     if (data.get("website")) return;
 
-    // Anti-spam temporel : soumission trop rapide (< 3s) → bot
+    // Anti-spam temporel
     if (Date.now() - submitTime.current < 3000) {
       setError("Veuillez patienter un instant avant d'envoyer.");
       return;
     }
 
-    // Validation email
     const email = (data.get("email") as string) || "";
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
       setError("Adresse email invalide.");
       return;
     }
 
-    // Longueur minimale du message
     const message = (data.get("message") as string) || "";
     if (message.trim().length < 20) {
       setError("Veuillez décrire votre projet en au moins 20 caractères.");
       return;
     }
 
-    const prenom = (data.get("prenom") as string) || "";
-    const nom = (data.get("nom") as string) || "";
-    const telephone = (data.get("telephone") as string) || "";
-    const service = (data.get("service") as string) || "";
-
     setLoading(true);
     try {
-      const res = await fetch("https://api.web3forms.com/submit", {
-        method: "POST",
-        headers: { "Content-Type": "application/json", Accept: "application/json" },
-        body: JSON.stringify({
-          access_key: WEB3FORMS_KEY,
-          // Sujet de l'email reçu
-          subject: `[Billiekia] Demande de ${prenom} ${nom}${service ? ` — ${service}` : ""}`,
-          // Destinataire pour le message de confirmation (optionnel)
-          from_name: `${prenom} ${nom}`,
-          email,
-          // Champs du formulaire
-          "Prénom": prenom,
-          "Nom": nom,
-          "Email": email,
-          "Téléphone": telephone || "—",
-          "Service": service || "—",
-          "Message": message,
-          // Redirection après succès (optionnel — on gère nous-mêmes)
-          redirect: "false",
-          // Désactiver l'email de confirmation automatique au visiteur
-          botcheck: "",
-        }),
+      await addDoc(collection(db, "contacts"), {
+        prenom: data.get("prenom"),
+        nom: data.get("nom"),
+        email,
+        telephone: data.get("telephone") || "",
+        service: data.get("service") || "",
+        message: message.trim(),
+        lu: false,
+        createdAt: serverTimestamp(),
       });
 
-      const json = await res.json();
-      if (json.success) {
-        setSent(true);
-        form.reset();
-      } else {
-        setError("Une erreur est survenue. Veuillez réessayer ou nous contacter par email.");
-      }
-    } catch {
-      setError("Impossible d'envoyer le message. Vérifiez votre connexion.");
+      setSent(true);
+      form.reset();
+    } catch (err) {
+      console.error(err);
+      setError("Une erreur est survenue. Veuillez réessayer ou nous écrire directement par email.");
     } finally {
       setLoading(false);
     }
@@ -129,7 +103,7 @@ export default function ContactForm() {
 
   return (
     <form onSubmit={handleSubmit} className="space-y-5" noValidate>
-      {/* Honeypot — invisible aux humains, piège les bots */}
+      {/* Honeypot */}
       <input
         type="text"
         name="website"
