@@ -6,7 +6,7 @@ service cloud.firestore {
       allow create: if true;
       // Seul l'admin authentifié peut lire, modifier ou supprimer
       allow read, update, delete: if request.auth != null
-        && request.auth.token.email == "billiekia.concept@gmail.com";
+        && request.auth.token.email in ["billiekia.concept@gmail.com", "dubonheurlac@gmail.com"];
     }
   }
 }

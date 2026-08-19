@@ -17,7 +17,7 @@ import {
   deleteDoc,
   Timestamp,
 } from "firebase/firestore";
-import { auth, db, googleProvider, ADMIN_EMAIL } from "@/lib/firebase";
+import { auth, db, googleProvider, ADMIN_EMAILS } from "@/lib/firebase";
 
 type Contact = {
   id: string;
@@ -49,7 +49,7 @@ export default function AdminPage() {
 
   // Écoute les contacts Firestore en temps réel
   useEffect(() => {
-    if (!user || user.email !== ADMIN_EMAIL) return;
+    if (!user || !ADMIN_EMAILS.includes(user.email ?? "")) return;
     const q = query(collection(db, "contacts"), orderBy("createdAt", "desc"));
     const unsub = onSnapshot(q, (snap) => {
       setContacts(
@@ -129,7 +129,7 @@ export default function AdminPage() {
   }
 
   // Accès refusé
-  if (user.email !== ADMIN_EMAIL) {
+  if (!ADMIN_EMAILS.includes(user.email ?? "")) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-[#F8F9FA] px-4">
         <div className="bg-white rounded-2xl shadow-xl p-10 w-full max-w-sm text-center">

@@ -23,5 +23,8 @@ googleProvider.setCustomParameters({
   hd: "gmail.com",
 });
 
-// Email autorisé à accéder à l'admin
-export const ADMIN_EMAIL = "billiekia.concept@gmail.com";
+// Emails autorisés à accéder à l'admin
+export const ADMIN_EMAILS = [
+  "billiekia.concept@gmail.com",
+  "dubonheurlac@gmail.com",
+];
