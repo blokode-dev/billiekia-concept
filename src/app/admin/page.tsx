@@ -102,8 +102,8 @@ export default function AdminPage() {
     return (
       <div className="min-h-screen flex items-center justify-center bg-[#F8F9FA] px-4">
         <div className="bg-white rounded-2xl shadow-xl p-10 w-full max-w-sm text-center">
-          <div className="w-16 h-16 rounded-full bg-[#1B3A6B] flex items-center justify-center mx-auto mb-6">
-            <span className="text-white text-2xl font-bold" style={{ fontFamily: "var(--font-bc)" }}>BC</span>
+          <div className="flex items-center justify-center mx-auto mb-6">
+            <img src="/logo.png" alt="Billiekia Concept" className="h-20 w-auto object-contain" />
           </div>
           <h1 className="text-2xl font-bold text-[#1B3A6B] uppercase mb-2" style={{ fontFamily: "var(--font-bc)" }}>
             Espace Admin
