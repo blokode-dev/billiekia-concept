@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import { Barlow_Condensed, Inter, Barlow } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
-import WhatsAppButton from "@/components/WhatsAppButton";
+import PublicLayout from "@/components/PublicLayout";
 
 const barlowCondensed = Barlow_Condensed({
   subsets: ["latin"],
@@ -186,10 +184,7 @@ export default function RootLayout({
         />
       </head>
       <body className="antialiased bg-white text-gray-900 overflow-x-hidden">
-        <Navbar />
-        <main>{children}</main>
-        <Footer />
-        <WhatsAppButton />
+        <PublicLayout>{children}</PublicLayout>
       </body>
     </html>
   );
